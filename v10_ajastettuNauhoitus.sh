@@ -50,7 +50,7 @@ xdotool type --window $ikkunaDec --delay 5 $kokousID; # syöttää kokoustunnuks
 xdotool key Return;
 sleep 3;
 iserror=$(wmctrl -l | grep -i "leave mee")
-if [ ${#iserror} != 0 ] # cathcaa mahdollisen "invalid meeting ID":n
+if [ ${#iserror} != 0 ] # catchaa mahdollisen "invalid meeting ID":n
 then
 	xdotool windowactivate ${iserror:0:10}
 	xdotool key Tab
